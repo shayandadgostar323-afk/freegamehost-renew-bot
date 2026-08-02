@@ -27,6 +27,11 @@ with sync_playwright() as p:
     print("Current URL:", page.url)
     print("Page title:", page.title())
 
+    print("Current URL:", page.url)
+    print("Page title:", page.title())
+
+    page.screenshot(path="login-result.png")
+
     browser.close()
 
 print("Finished")
