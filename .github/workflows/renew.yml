@@ -26,5 +26,8 @@ jobs:
           playwright install chromium
 
       - name: Run bot
+        env:
+          FREEGAME_USERNAME: ${{ secrets.FREEGAME_USERNAME }}
+          FREEGAME_PASSWORD: ${{ secrets.FREEGAME_PASSWORD }}
         run: |
           python bot.py
